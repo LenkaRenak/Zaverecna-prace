@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lenka Reňáková</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body class="kontakt">
+  <header>
+    <a href="index.html">
+      <div class="logo">
+        <div class="logo-icon"><img src="assets/img/logo.png" />
+        </div>
+        LENKA<br />REŇÁKOVÁ
+      </div>
+    </a>
+    <nav>
+      <a href="o-mne.html">O MNĚ</a>
+      <a href="projekty.html">PROJEKTY</a>
+      <a href="kontakt.html" class="active">KONTAKT</a>
+    </nav>
+  </header>
+
+  <div class="stripe">
+    <div class="stripe-container">
+      <div class="stripe-gap">
+      </div>
+      <div class="content">
+        <section class="hero">
+          <div class="hero-images">
+            <img src="assets/img/phone.png" class="inline-img phone" />
+
+            <div class="flip-container" id="flipCard">
+              <div class="flipper">
+                <div class="front">
+                  <img src="assets/img/kontakt-vizitka.png" alt="Front Image">
+                </div>
+                <div class="back">
+                  <img src="assets/img/kontakt-kontaktujte.png" alt="Back Image">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <footer>
+          www.lenkarenakova.cz
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById("flipCard").addEventListener("click", function () {
+      this.classList.toggle("flipped");
+    });
+
+  </script>
+
+</body>
+
+</html>
