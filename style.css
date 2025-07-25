@@ -14,9 +14,6 @@ a {
   text-decoration: none;
 }
 
-a.active {
-  color: #747161;
-}
 
 h1 {
   font-size: 93px;
@@ -71,8 +68,8 @@ nav a {
   background-color: #BBA9A0;
   width: 100vw;
   height: 815px;
-  position: absolute;
-  top: 310px;
+  position: relative;
+  top: 150px;
 }
 
 .stripe-container {
@@ -148,6 +145,11 @@ nav a {
 
 
 /** o mne **/
+.container.o-mne {
+  position: relative;
+  top: 250px;
+}
+
 .o-mne .content {
   top: 0px;
 }
@@ -185,8 +187,13 @@ body.o-mne {
 }
 
 /** projekty **/
-.projekty .stripe {
+.projekty.stripe {
   background-color: #D0CFCF;
+  height: auto;
+}
+
+.moodboard {
+  text-align: center;
 }
 
 .projekty .hero-images img {
@@ -218,6 +225,20 @@ body.o-mne {
 }
 
 /** kontakt **/
+.kontakt.stripe {
+  top: 250px;
+  height: auto;
+}
+
+.kontakt .stripe-gap {
+  height: 100%;
+}
+
+.kontakt .content {
+  top: 0;
+}
+
+
 .kontakt .kontakt-label {
   max-width: 650px;
 }
@@ -225,6 +246,20 @@ body.o-mne {
 .kontakt .kontakt-label {
   margin: 30px;
 }
+
+.nav-kontakt {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 8px 25px;
+  color: #fff;
+  background-color: #000;
+  transition: all 0.3s;
+}
+
+.nav-kontakt:hover {
+  box-shadow: 0 0 16px 6px gray;
+}
+
 
 
 .flip-container {
@@ -267,10 +302,28 @@ body.o-mne {
 
 
 /** footer **/
+.container.footer {
+  position: relative;
+  top: 460px;
+}
+
 footer {
   padding: 20px 230px;
   font-family: Montserrat, sans-serif;
   font-size: 36px;
   color: #3D3C3C;
   position: relative;
+}
+
+/** effects **/
+.zoom-on-scroll {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  will-change: transform, opacity;
+}
+
+.zoom-on-scroll.in-view {
+  transform: scale(1);
+  opacity: 1;
 }
